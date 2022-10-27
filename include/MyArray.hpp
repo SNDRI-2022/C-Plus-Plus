@@ -39,14 +39,13 @@ public:
      *
      * @param  Func
      ********************************************************************************/
-    void MySortFunc(void (*Func)(MyArray *_array)) { Func(this); }
+    void MySortFunc(void (&Func)(MyArray &_array)) { Func(*this); }
     /********************************************************************************
      * @brief 获取类中的arr
      *
      * @return std::vector<int>&2
      ********************************************************************************/
-    std::vector<int> &getarray() { return this->arr; };
-    !!!!;
+    std::vector<int> *getarray() { return &(this->arr); }
 
 private:
     void init(const int len);

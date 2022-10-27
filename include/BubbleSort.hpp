@@ -6,19 +6,26 @@
  * @date 2022-10-27
  ********************************************************************************/
 #include <MyArray.hpp>
-void MyBubbleSort(MyArray *_array)
+void MyBubbleSort(MyArray &_array)
 {
-    // std::vector<int> *array = _array->getarray();
-    // int i, j;
-    // for (i = 0; i < array->size(); i++)
+
+    std::vector<int> *array = _array.getarray();
+    int i, j;
+    int len = array->size();
+    std::cout << "未完成" << std::endl;
+    /********************************************************************************
+     * @brief 未完成
+     *
+     ********************************************************************************/
+    // for (i = 0; i < len - 1; i++)
     // {
-    //     for (j = 0; j < array->size() - i; j++)
+    //     for (j = 0; j < len - 1 - i; j++)
     //     {
-    //         if (array[i] < array[j])
+    //         if (array->operator[](j) > array->operator[](j + 1))
     //         {
-    //             auto temp = array[i];
-    //             array[i] = array[i];
-    //             array[j] = temp;
+    //             auto temp = array->operator[](j);
+    //             array->operator[](j) = array->operator[](j + 1);
+    //             array->operator[](j) = temp;
     //         }
     //     }
     // }
