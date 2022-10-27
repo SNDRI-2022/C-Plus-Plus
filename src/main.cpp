@@ -1,6 +1,11 @@
 #include <iostream>
+#include <MySort.h>
 
 int main(int argc, char *argv[])
 {
-	std::cout << "Hello world!" << std::endl;
+	MyArray array;
+	array.show();
+	array.MySortFunc(MyBubbleSort);
+	array.show();
+	std::cout << "TEST!" << std::endl;
 }

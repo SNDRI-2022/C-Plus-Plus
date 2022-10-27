@@ -5,10 +5,7 @@
  * @version 1.0.0
  * @date 2022-10-27
  ********************************************************************************/
-#include <iostream>
-#include <vector>
-#include <time.h>
-using namespace std;
+#include <HeaderFile.h>
 /********************************************************************************
  * @brief 用于初始化测试案例
  *
@@ -34,13 +31,26 @@ public:
     void show()
     {
         for (auto i = this->arr.begin(); i != this->arr.end(); i++)
-            cout << *i << " ";
-        cout << endl;
+            std::cout << *i << " ";
+        std::cout << std::endl;
     };
+    /********************************************************************************
+     * @brief 调用自己写的排序函数
+     *
+     * @param  Func
+     ********************************************************************************/
+    void MySortFunc(void (*Func)(MyArray *_array)) { Func(this); }
+    /********************************************************************************
+     * @brief 获取类中的arr
+     *
+     * @return std::vector<int>&2
+     ********************************************************************************/
+    std::vector<int> &getarray() { return this->arr; };
+    !!!!;
 
 private:
     void init(const int len);
-    vector<int> arr;
+    std::vector<int> arr;
 };
 
 void MyArray::init(const int len)
