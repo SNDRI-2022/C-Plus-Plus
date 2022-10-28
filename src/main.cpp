@@ -8,6 +8,7 @@ void test()
 }
 int main(int argc, char *argv[])
 {
+	//测试中
 	test();
 	// MyArray array;
 	// array.show();
