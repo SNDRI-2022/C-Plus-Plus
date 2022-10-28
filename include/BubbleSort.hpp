@@ -17,9 +17,7 @@ void MyBubbleSort(MyArray &_array)
         {
             if (array.operator[](i) < array.operator[](j))
             {
-                auto temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                std::swap(array[i], array[j]);
             }
         }
     }
