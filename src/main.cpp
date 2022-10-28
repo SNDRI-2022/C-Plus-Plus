@@ -3,9 +3,10 @@
 
 int main(int argc, char *argv[])
 {
+
 	MyArray array;
 	array.show();
 	array.MySortFunc(MyBubbleSort);
 	array.show();
-	std::cout << "TEST!" << std::endl;
+	std::cout << "end!" << std::endl;
 }

@@ -8,25 +8,21 @@
 #include <MyArray.hpp>
 void MyBubbleSort(MyArray &_array)
 {
-
-    std::vector<int> *array = _array.getarray();
-    int i, j;
-    int len = array->size();
-    std::cout << "未完成" << std::endl;
-    /********************************************************************************
-     * @brief 未完成
-     *
-     ********************************************************************************/
-    // for (i = 0; i < len - 1; i++)
-    // {
-    //     for (j = 0; j < len - 1 - i; j++)
-    //     {
-    //         if (array->operator[](j) > array->operator[](j + 1))
-    //         {
-    //             auto temp = array->operator[](j);
-    //             array->operator[](j) = array->operator[](j + 1);
-    //             array->operator[](j) = temp;
-    //         }
-    //     }
-    // }
+    //_array.getarray()自动类型转换返回类型为std::vector<int>并不是返回引用!
+    std::vector<int> array = _array.getarray();
+    int i, j, len = array.size();
+    for (i = 0; i < len - 1; i++)
+    {
+        for (j = i + 1; j < len; j++)
+        {
+            if (array.operator[](i) < array.operator[](j))
+            {
+                auto temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    //_array.getarray()返回引用!(_array.getarray()相当于MyArray类中arr的别名)
+    _array.getarray() = array;
 }

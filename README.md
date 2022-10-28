@@ -3,6 +3,7 @@
 ```
 C-Plus-Plus
 ├─ .vscode
+│  ├─ c_cpp_properties.json
 │  ├─ launch.json
 │  ├─ settings.json
 │  └─ tasks.json
@@ -14,10 +15,8 @@ C-Plus-Plus
 ├─ lib
 ├─ Makefile
 ├─ output
-│  └─ main.exe
 ├─ README.md
 └─ src
-   ├─ main.cpp
-   └─ main.o
+   └─ main.cpp
 
 ```

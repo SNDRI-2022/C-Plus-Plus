@@ -12,7 +12,7 @@
             "externalConsole": false,
             "program": "${workspaceFolder}/output/main",
             "linux": {
-                "name": "DebugLinux",
+                "name": "Debug",
                 "request": "launch",
                 "type": "cppdbg",
                 "MIMode": "gdb",
@@ -20,7 +20,7 @@
                 "program": "${workspaceFolder}/output/main"
             },
             "osx": {
-                "name": "DebugMac",
+                "name": "Debug",
                 "request": "launch",
                 "type": "cppdbg",
                 "MIMode": "lldb",
@@ -28,7 +28,7 @@
                 "program": "${workspaceFolder}/output/main"
             },
             "windows": {
-                "name": "DebugWindows",
+                "name": "Debug",
                 "request": "launch",
                 "type": "cppdbg",
                 "MIMode": "gdb",
@@ -36,6 +36,6 @@
                 "program": "${workspaceFolder}/output/main.exe"
             },
             "preLaunchTask": "build"
-        }
+        },
     ]
 }
