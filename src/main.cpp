@@ -1,4 +1,4 @@
-#include <MySort.h>
+#include <MySort.hpp>
 void time()
 {
 	char str[50];
@@ -6,17 +6,17 @@ void time()
 	strftime(str, 50, "%X", localtime(&now));
 	std::cout << str << std::endl;
 }
+
 int main(int argc, char *argv[])
 {
 
 	try
 	{
-		// MyArray array;
-		// array.show();
-		// array.MySortFunc(MyBubbleSort); //冒泡排序
-		// // array.MySortFunc();
-		// array.show();
-		// std::cout << "end!" << strftime(str, 100, "time", ) << std::endl;
+		MyArray array;
+		array.show();
+		// array.MySortFunc(MyBubbleSort);	   //冒泡排序
+		array.MySortFunc(MySelectionSort); //选择排序
+		array.show();
 		time();
 	}
 	catch (char *str)

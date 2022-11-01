@@ -9,7 +9,9 @@
                 "command": "powershell",
                 "args": [
                     "-c",
-                    "mingw32-make"
+                    "mingw32-make",
+                    "-I",
+                    "${workspaceFolder}/include/**"
                 ]
             },
             "linux": {
