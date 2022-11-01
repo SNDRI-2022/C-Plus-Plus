@@ -6,10 +6,9 @@ void time()
 	strftime(str, 50, "%X", localtime(&now));
 	std::cout << str << std::endl;
 }
-
 int main(int argc, char *argv[])
 {
-
+	std::cout << "Program starts\n----------" << std::endl;
 	try
 	{
 		MyArray array;
@@ -17,10 +16,10 @@ int main(int argc, char *argv[])
 		// array.MySortFunc(MyBubbleSort);	   //冒泡排序
 		array.MySortFunc(MySelectionSort); //选择排序
 		array.show();
-		time();
 	}
 	catch (char *str)
 	{
 		std::cout << str << std::endl;
 	}
+	return 0;
 }

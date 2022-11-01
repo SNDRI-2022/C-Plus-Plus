@@ -10,8 +10,6 @@
                 "args": [
                     "-c",
                     "mingw32-make",
-                    "-I",
-                    "${workspaceFolder}/include/**"
                 ]
             },
             "linux": {

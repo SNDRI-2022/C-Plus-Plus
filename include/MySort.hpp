@@ -5,5 +5,5 @@
  * @version 1.0.0
  * @date 2022-10-27
  ********************************************************************************/
-#include <BubbleSort.hpp>
-#include <SelectionSort.hpp>
+#include <sort-BubbleSort.hpp>
+#include <sort-SelectionSort.hpp>
