@@ -9,14 +9,17 @@ C-Plus-Plus
 │  └─ tasks.json
 ├─ include
 │  ├─ BubbleSort.hpp
-│  ├─ HeaderFile.h
+│  ├─ HeaderFile.hpp
 │  ├─ MyArray.hpp
-│  └─ MySort.h
+│  ├─ MySort.hpp
+│  └─ SelectionSort.hpp
 ├─ lib
 ├─ Makefile
 ├─ output
+│  └─ main.exe
 ├─ README.md
 └─ src
-   └─ main.cpp
+   ├─ main.cpp
+   └─ main.o
 
 ```
