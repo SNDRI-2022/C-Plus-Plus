@@ -67,4 +67,4 @@ C-Plus-Plus
 ## vscode美化类
 - [github主题](https://github.com/primer/github-vscode-theme):黑色和白色都很好看
 - [扁平化图标](https://github.com/PKief/vscode-material-icon-theme):还是喜欢扁平化图标
-- [连体字](https://github.com/tonsky/FiraCode):很好的字体
+- [代码连体字](https://github.com/tonsky/FiraCode):很好的字体
