@@ -56,11 +56,12 @@ C-Plus-Plus
 ###### v2.0.0:
     1.添加test文件夹
     2.更改Makefile文件(**注意:未实现test文件的运行和调试**)    
-    3.使用Code Runner插件快速编译并运行[本项目配置文件](#code-runner):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
+    3.使用Code Runner插件快速编译并运行
+  [本项目配置文件](#code-runner插件配置):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 
 # vscode插件推荐
 ## 功能类
-- [一键编译运行多种语言](https://github.com/formulahendry/vscode-code-runner):[本项目配置文件](#code-runner)
+- [一键编译运行多种语言](https://github.com/formulahendry/vscode-code-runner):[本项目配置文件](#code-runner插件配置)
 - [一键生成c/c++项目目录](https://github.com/danielpinto8zz6/c-cpp-project-generator#readme):非常好用,一键生成
 - [一键生成注释](https://github.com/cschlosser/doxdocgen):懒得写注释,**注意:必须在配置文件中定义一个模板才能以能偷懒**
 - [一键生成目录树到你的README文件中](https://github.com/zhucyi/project-tree):上面的目录结构根本不用再手打了,一键添加
@@ -74,7 +75,6 @@ C-Plus-Plus
 - [github主题](https://github.com/primer/github-vscode-theme):黑色和白色都很好看
 - [扁平化图标](https://github.com/PKief/vscode-material-icon-theme):还是喜欢扁平化图标
 - [代码连体字](https://github.com/tonsky/FiraCode):很好的字体
-<a href="#code-runner"></a>
 # Code-Runner插件配置
 [Code Runner官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 
