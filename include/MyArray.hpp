@@ -8,13 +8,10 @@
 #ifndef _MYARRAY_HPP
 #define _MYARRAY_HPP
 #include <HeaderFile.hpp>
-/********************************************************************************
- * @brief 用于初始化测试案例
- *
- ********************************************************************************/
 class MyArray
 {
 public:
+    friend std::ostream &operator<<(std::ostream &output, const MyArray &_arr);
     /********************************************************************************
      * @brief Construct a new MyArray object
      * 构造长度为10的新MyArray对象
@@ -27,6 +24,12 @@ public:
      ********************************************************************************/
     MyArray(const int len) { init(len); }
     /********************************************************************************
+     * @brief 调用自己写的排序函数
+     *
+     * @param  Func
+     ********************************************************************************/
+    void MySortFunc(void (&Func)(MyArray &_array)) { Func(*this); }
+    /********************************************************************************
      * @brief 用迭代器遍历输出所有值
      *
      ********************************************************************************/
@@ -34,14 +37,7 @@ public:
     {
         for (auto i = this->arr.begin(); i != this->arr.end(); i++)
             std::cout << *i << " ";
-        std::cout << std::endl;
     };
-    /********************************************************************************
-     * @brief 调用自己写的排序函数
-     *
-     * @param  Func
-     ********************************************************************************/
-    void MySortFunc(void (&Func)(MyArray &_array)) { Func(*this); }
     /********************************************************************************
      * @brief 获取类中的arr(破坏封装)
      *
@@ -50,8 +46,8 @@ public:
     std::vector<int> &getarray() { return arr; }
 
 private:
-    void init(const int len);
     std::vector<int> arr;
+    void init(const int len);
 };
 
 void MyArray::init(const int len)
@@ -60,4 +56,12 @@ void MyArray::init(const int len)
     for (int i = 0; i < len; i++)
         arr.push_back(rand() % 10);
 }
+
+std::ostream &operator<<(std::ostream &output, const MyArray &_arr)
+{
+    for (auto i = _arr.arr.begin(); i != _arr.arr.end(); i++)
+        output << *i << " ";
+    return output;
+}
+
 #endif

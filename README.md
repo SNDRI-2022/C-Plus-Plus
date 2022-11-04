@@ -35,26 +35,32 @@ C-Plus-Plus
 │  └─ sort-ShellSort.hpp
 ├─ lib
 ├─ Makefile
-├─ output
-│  └─ main.exe
+├─ out
 ├─ README.md
-└─ src
-   ├─ main.cpp
-   └─ main.o
+├─ src
+│  └─ main.cpp
+└─ test
+   ├─ include
+   │  └─ test.hpp
+   ├─ lib
+   └─ src
+      └─ test.cpp
 
 ```
 # 版本内容更新
 ###### v1.0.0: 
-   1.实现冒泡排序(BubbleSort)
-
-   2.实现选择排序(SelectionSort)
-
-   3.添加插入排序(InsertionSort) **未实现**
-
-   4.添加希尔排序(ShellSort) **未实现**
+    1.实现冒泡排序(BubbleSort)
+    2.实现选择排序(SelectionSort)
+    3.添加插入排序(InsertionSort) **未实现**
+    4.添加希尔排序(ShellSort) **未实现**
+###### v2.0.0:
+    1.添加test文件夹
+    2.更改Makefile文件(**注意:未实现test文件的运行和调试**)    
+    3.使用Code Runner插件快速编译并运行[本项目配置文件](#code-runner):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 
 # vscode插件推荐
 ## 功能类
+- [一键编译运行多种语言](https://github.com/formulahendry/vscode-code-runner):[本项目配置文件](#code-runner)
 - [一键生成c/c++项目目录](https://github.com/danielpinto8zz6/c-cpp-project-generator#readme):非常好用,一键生成
 - [一键生成注释](https://github.com/cschlosser/doxdocgen):懒得写注释,**注意:必须在配置文件中定义一个模板才能以能偷懒**
 - [一键生成目录树到你的README文件中](https://github.com/zhucyi/project-tree):上面的目录结构根本不用再手打了,一键添加
@@ -68,32 +74,21 @@ C-Plus-Plus
 - [github主题](https://github.com/primer/github-vscode-theme):黑色和白色都很好看
 - [扁平化图标](https://github.com/PKief/vscode-material-icon-theme):还是喜欢扁平化图标
 - [代码连体字](https://github.com/tonsky/FiraCode):很好的字体
-```
-C-Plus-Plus
-├─ .vscode
-│  ├─ c_cpp_properties.json
-│  ├─ launch.json
-│  ├─ settings.json
-│  └─ tasks.json
-├─ include
-│  ├─ HeaderFile.hpp
-│  ├─ MyArray.hpp
-│  ├─ MySort.hpp
-│  ├─ sort-BubbleSort.hpp
-│  ├─ sort-InsertionSort.hpp
-│  ├─ sort-SelectionSort.hpp
-│  └─ sort-ShellSort.hpp
-├─ lib
-├─ Makefile
-├─ out
-├─ README.md
-├─ src
-│  └─ main.cpp
-└─ test
-   ├─ include
-   │  └─ test.hpp
-   ├─ lib
-   └─ src
-      └─ test.cpp
+<a href="#code-runner"></a>
+# Code-Runner插件配置
+[Code Runner官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 
+```
+// settings.json文件
+{
+  //运行插件时保存当前文件
+  "code-runner.saveFileBeforeRun": true,
+  //ctrl+alt+k运行自定义命令(这里是清除生成文件)
+  "code-runner.customCommand": "cd $workspaceRoot && del /q /f .\\out\\$fileNameWithoutExt.exe && echo Cleanup complete!",
+  //自定义语言运行命令(ctrl+alt+n运行,ctrl+alt+m结束运行,快捷键失效可能是英伟达游戏内覆盖快捷键占用)
+  "code-runner.executorMap": {
+    "c": "cd $workspaceRoot && gcc -g $fullFileName -I $workspaceRoot\\include -I $workspaceRoot\\test\\include -o$workspaceRoot\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
+    "cpp": "cd $workspaceRoot && g++ -g $fullFileName -I $workspaceRoot\\include -I $workspaceRoot\\test\\include -o$workspaceRoot\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe"
+  },
+}
 ```
