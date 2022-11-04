@@ -8,7 +8,6 @@ void time()
 }
 int main(int argc, char *argv[])
 {
-	std::cout << "Program starts\n----------" << std::endl;
 	try
 	{
 		MyArray array;
