@@ -1,4 +1,5 @@
-#!控制主目录的makefie文件
+#!注意:未对test目录进行配置
+#!
 # 'make'        build executable file 'main'
 # 'make clean'  removes all .o and executable files
 #

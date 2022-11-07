@@ -58,6 +58,10 @@ C-Plus-Plus
     2.更改Makefile文件(**注意:未实现test文件的运行和调试**)    
     3.使用Code Runner插件快速编译并运行
   [本项目配置文件](#code-runner插件配置):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
+###### v2.1.0:
+    1.修改Code Runner插件配置
+    2.修改launch文件配置
+    3.修改tasks文件配置
 
 # vscode插件推荐
 ## 功能类

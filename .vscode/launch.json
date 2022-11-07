@@ -72,7 +72,7 @@
         "miDebuggerPath": "gdb.exe",
         "program": "${workspaceFolder}/out/test.exe"
       },
-      "preLaunchTask": "build"
+      "preLaunchTask": "test-build"
     },
   ]
 }
