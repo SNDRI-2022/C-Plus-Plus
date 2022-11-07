@@ -48,6 +48,7 @@ C-Plus-Plus
 
 ```
 # 版本内容更新
+[本项目配置文件](#code-runner插件配置):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 ###### v1.0.0: 
     1.实现冒泡排序(BubbleSort)
     2.实现选择排序(SelectionSort)
@@ -57,7 +58,6 @@ C-Plus-Plus
     1.添加test文件夹
     2.更改Makefile文件(**注意:未实现test文件的运行和调试**)    
     3.使用Code Runner插件快速编译并运行
-  [本项目配置文件](#code-runner插件配置):[官方配置说明](https://github.com/formulahendry/vscode-code-runner)
 ###### v2.1.0:
     1.修改Code Runner插件配置
     2.修改launch文件配置
