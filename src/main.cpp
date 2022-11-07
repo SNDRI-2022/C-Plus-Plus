@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	{
 		std::cout << str << std::endl;
 	}
+	time();
 	return 0;
 }
 

@@ -1,7 +1,7 @@
 {
   "code-runner.defaultLanguage": "cpp",
   "code-runner.saveFileBeforeRun": true,
-  "code-runner.customCommand": "cd $workspaceRoot && del /q /f .\\out\\*.exe && echo Cleanup complete!",
+  "code-runner.customCommand": "cd $workspaceRoot && del /q /f .\\out\\$fileNameWithoutExt.exe && echo Cleanup complete!",
   "code-runner.executorMap": {
     "c": "cd $workspaceRoot && gcc -g $fullFileName -I $workspaceRoot\\include -I $workspaceRoot\\test\\include -o$workspaceRoot\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
     "cpp": "cd $workspaceRoot && g++ -g $fullFileName -I $workspaceRoot\\include -I $workspaceRoot\\test\\include -o$workspaceRoot\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe"

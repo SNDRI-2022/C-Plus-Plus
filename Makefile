@@ -1,3 +1,4 @@
+#!控制主目录的makefie文件
 # 'make'        build executable file 'main'
 # 'make clean'  removes all .o and executable files
 #
@@ -33,7 +34,6 @@ LIBDIRS		:= $(LIB)
 FIXPATH = $(subst /,\,$1)
 RM			:= del /q /f
 MD	:= mkdir
-#还没有为linux系统设置test文件夹的功能
 else
 MAIN	:= main
 SOURCEDIRS	:= $(shell find $(SRC) -type d)
@@ -42,7 +42,6 @@ LIBDIRS		:= $(shell find $(LIB) -type d)
 FIXPATH = $1
 RM = rm -f
 MD	:= mkdir -p
-#还没有为mac系统设置test文件夹的功能
 endif
 
 # define any directories containing header files other than /usr/include
