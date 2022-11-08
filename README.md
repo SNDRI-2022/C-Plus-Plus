@@ -60,9 +60,9 @@ C-Plus-Plus
     3.修改tasks文件配置(添加编译test文件的终端命令)
 ###### v2.2.0:
     1.删除test文件夹中的src、lib、include文件夹
-    1.修改Code Runner插件配置
-    2.修改launch文件配置(修改test文件夹的调试)
-    3.修改tasks文件配置(修改编译test文件夹的终端命令)    
+    2.修改Code Runner插件配置
+    3.修改launch文件配置(修改test文件夹的调试)
+    4.修改tasks文件配置(修改编译test文件夹的终端命令)    
 
 # vscode插件推荐
 ## 功能类
