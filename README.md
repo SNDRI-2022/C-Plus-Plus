@@ -60,8 +60,8 @@ C-Plus-Plus
     3.使用Code Runner插件快速编译并运行
 ###### v2.1.0:
     1.修改Code Runner插件配置
-    2.修改launch文件配置
-    3.修改tasks文件配置
+    2.修改launch文件配置(添加test文件的调试)
+    3.修改tasks文件配置(添加编译test文件的终端命令)
 
 # vscode插件推荐
 ## 功能类
