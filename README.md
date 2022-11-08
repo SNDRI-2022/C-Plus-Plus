@@ -18,10 +18,10 @@
 
 
 # 目录结构
+
 ```
 C-Plus-Plus
 ├─ .vscode
-│  ├─ c_cpp_properties.json
 │  ├─ launch.json
 │  ├─ settings.json
 │  └─ tasks.json
@@ -40,11 +40,7 @@ C-Plus-Plus
 ├─ src
 │  └─ main.cpp
 └─ test
-   ├─ include
-   │  └─ test.hpp
-   ├─ lib
-   └─ src
-      └─ test.cpp
+   └─ test.cpp
 
 ```
 # 版本内容更新
@@ -62,6 +58,11 @@ C-Plus-Plus
     1.修改Code Runner插件配置
     2.修改launch文件配置(添加test文件的调试)
     3.修改tasks文件配置(添加编译test文件的终端命令)
+###### v2.2.0:
+    1.删除test文件夹中的src、lib、include文件夹
+    1.修改Code Runner插件配置
+    2.修改launch文件配置(修改test文件夹的调试)
+    3.修改tasks文件配置(修改编译test文件夹的终端命令)    
 
 # vscode插件推荐
 ## 功能类
@@ -87,19 +88,15 @@ C-Plus-Plus
 // settings.json文件
 {
   ////运行时自动保存全部文件
-  ////"code-runner.saveAllFilesBeforeRun": true,
-  //自动清除输出
-  "code-runner.clearPreviousOutput": true,
-  //默认运行语言
-  //"code-runner.defaultLanguage": "cpp",
-  //运行插件时保存当前文件
-  "code-runner.saveFileBeforeRun": true,
-  //ctrl+alt+k运行自定义命令(这里是清除生成文件)
-  "code-runner.customCommand": "cd $workspaceRoot && del /q /f .\\out\\$fileNameWithoutExt.exe && echo Cleanup complete!",
-  //自定义语言运行命令
-  "code-runner.executorMap": {
-    "c": "cd $workspaceRoot && gcc -g $fullFileName: -I .\\include -I .\\test\\include -o .\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
-    "cpp": "cd $workspaceRoot && g++ -g $fullFileName -I .\\include -I .\\test\\include -o .\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
-  },
+	////"code-runner.saveAllFilesBeforeRun": true,
+	//运行时自动保存当前文件
+	"code-runner.clearPreviousOutput": true,
+	//ctrl+alt+k运行自定义命令(这里是清除生成文件)
+	"code-runner.customCommand": "cd $workspaceRoot && del /q /f .\\out\\$fileNameWithoutExt.exe && echo Cleanup complete!",
+	//自定义语言运行命令
+	"code-runner.executorMap": {
+		"c": "cd $workspaceRoot && gcc -g $fullFileName -I .\\include -o .\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
+		"cpp": "cd $workspaceRoot && g++ -g $fullFileName -I .\\include -o .\\out\\$fileNameWithoutExt.exe && .\\out\\$fileNameWithoutExt.exe",
+	},
 }
 ```
